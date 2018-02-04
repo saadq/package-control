@@ -90,7 +90,7 @@ An example:
 
 | param | required | type   | description                  | example            |
 | ----- | -------- | ------ | ---------------------------- | ------------------ |
-| limit | no       | string | Limit size of theme results. | `pc.getThemes(10)` |
+| limit | no       | number | Limit size of theme results. | `pc.getThemes(10)` |
 
 ### pc.getColorSchemes([limit])
 
@@ -98,7 +98,7 @@ An example:
 
 | param | required | type   | description                         | example                  |
 | ----- | -------- | ------ | ----------------------------------- | ------------------------ |
-| limit | no       | string | Limit size of color scheme results. | `pc.getColorSchemes(10)` |
+| limit | no       | number | Limit size of color scheme results. | `pc.getColorSchemes(10)` |
 
 ### pc.getLanguages([limit])
 
@@ -106,4 +106,4 @@ An example:
 
 | param | required | type   | description                     | example               |
 | ----- | -------- | ------ | ------------------------------- | --------------------- |
-| limit | no       | string | Limit size of language results. | `pc.getLanguages(10)` |
+| limit | no       | number | Limit size of language results. | `pc.getLanguages(10)` |
