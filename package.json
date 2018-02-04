@@ -1,0 +1,68 @@
+{
+  "name": "package-control",
+  "version": "0.0.0",
+  "description": "An API client for searching Package Control packages.",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "sublime",
+    "package",
+    "control"
+  ],
+  "repository": "https://github.com/saadq/package-control",
+  "author": "Saad Quadri <saad@saadq.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel index.js -d lib && npm run copy-types",
+    "clean": "trash lib",
+    "copy-types": "cp index.js lib/index.js.flow",
+    "flow": "flow",
+    "glow": "glow",
+    "lint": "blyss | snazzy",
+    "fix": "blyss --fix",
+    "format": "prettier --write \"*.js\"",
+    "ava": "ava",
+    "test": "npm run lint && npm run glow && npm run ava",
+    "prepare": "npm run clean && npm run build"
+  },
+  "blyss": {
+    "ignore": [
+      "lib"
+    ]
+  },
+  "ava": {
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ],
+    "babel": {
+      "presets": [
+        "flow"
+      ]
+    }
+  },
+  "dependencies": {
+    "axios": "^0.17.1"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-register": "^6.26.0",
+    "blyss": "^10.1.0",
+    "flow-bin": "^0.64.0",
+    "flow-copy-source": "^1.2.2",
+    "glow": "^1.1.2",
+    "jest": "^22.1.4",
+    "prettier": "^1.10.2",
+    "snazzy": "^7.0.0",
+    "trash-cli": "^1.4.0"
+  }
+}
