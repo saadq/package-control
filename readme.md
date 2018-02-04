@@ -1,6 +1,7 @@
 # package-control
+> A client for working with `package-control` in Node.
 
-A client for working with `package-control` in Node.
+[![Build Status](https://travis-ci.org/saadq/package-control.svg?branch=master)](https://travis-ci.org/saadq/package-control) [![Flow typed](https://img.shields.io/badge/flow-typed-E8BD36.svg)](https://flow.org)
 
 ## Installation
 
